@@ -1,2 +1,51 @@
-<h3>Home Component</h3>
-<p>Welcome to Angular Seed</p>
+
+<div class="container">
+  <h3>Employee Form</h3>
+  <form #form="ngForm" novalidate>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" required placeholder="First Name" name="firstName" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" required placeholder="Last Name" name="lastName" ngModel>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="is-full-time" ngModel> Full Time Employee
+      </label>
+    </div>
+
+    <label> Payment Type </label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="pay-type" value="w2" checked> W2
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="pay-type" value="1099"> 1099
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label>Primary Language</label>
+      <select name="" class="form-control">
+        <option *ngFor="let lang of languages">
+          {{ lang }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Date Hired</label>
+      <input type="date" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ok</button>
+  </form>
+</div>
+
+
