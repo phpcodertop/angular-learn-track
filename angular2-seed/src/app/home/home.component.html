@@ -1,17 +1,25 @@
 
 <div class="container">
   <h3>Employee Form</h3>
-  <form #form="ngForm" novalidate>
-    <div class="form-group">
-      <label>First Name</label>
-      <input type="text" class="form-control" required placeholder="First Name" name="firstName"
+  <form #form="ngForm" novalidate (submit)="submitEmployeeForm(form)">
+
+    <div class="form-group" [class.has-error]="firstName.invalid && firstName.touched" >
+      <label class="control-label">First Name</label>
+      <input #firstName="ngModel" type="text" class="form-control" required placeholder="First Name" name="firstName"
              [(ngModel)]="model.firstName" >
+      <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
+        First Name Is Required
+      </div>
     </div>
 
-    <div class="form-group">
-      <label>Last Name</label>
-      <input type="text" class="form-control" required placeholder="Last Name" name="lastName"
+
+    <div class="form-group"  [class.has-error]="lastName.invalid && lastName.touched" >
+      <label class="control-label">Last Name</label>
+      <input #lastName="ngModel" type="text" class="form-control" required placeholder="Last Name" name="lastName"
              [(ngModel)]="model.lastName">
+      <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">
+        Last Name Is Required
+      </div>
     </div>
 
     <div class="checkbox">
@@ -32,21 +40,23 @@
       </label>
     </div>
 
-    <div class="form-group">
-      <label>Primary Language</label>
-      <select name="primaryLanguage" [(ngModel)]="model.primaryLanguage" class="form-control">
+    <div class="form-group"  [class.has-error]="hasPrimaryLanguageError">
+      <label class="control-label">Primary Language</label>
+      <select name="primaryLanguage" (change)="validatePrimaryLanguage($event)" (blur)="validatePrimaryLanguage($event)" [(ngModel)]="model.primaryLanguage" class="form-control">
+        <option value="default">Select a Language</option>
         <option *ngFor="let lang of languages">
           {{ lang }}
         </option>
       </select>
+      <div *ngIf="hasPrimaryLanguageError" class="alert alert-danger">
+        Must Select A language
+      </div>
     </div>
-    
 
-    <button type="submit" class="btn btn-primary">Ok</button>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Ok</button>
   </form>
-  Model: {{ model | json }}
-  <br>
-  Angular: {{ form.value | json }}
+
 </div>
 
 
