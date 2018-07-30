@@ -16,6 +16,8 @@ import {ToastrService} from './common/toastr.service';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import {Error404Component} from './errors/404.component';
+import {AuthService} from './user/auth.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -31,14 +33,17 @@ import {Error404Component} from './errors/404.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     EventService,
     ToastrService,
     EventRouteActivatorService,
     { provide: 'canDeactivateCreateEvent' , useValue: checkDirtyState},
-    EventListResolver
+    EventListResolver,
+    AuthService
   ],
   bootstrap: [EventsAppComponent]
 })
