@@ -98,10 +98,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1477" />
-    <option name="y" value="114" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -186,16 +186,24 @@
       <workItem from="1532955061161" duration="41000" />
       <workItem from="1532955136600" duration="118000" />
       <workItem from="1532955289093" duration="95000" />
-      <workItem from="1532955417612" duration="14688000" />
+      <workItem from="1532955417612" duration="15284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29209000" />
+    <option name="totallyTimeSpent" value="29805000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32918397" />
@@ -204,7 +212,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49864498" visible="true" weight="0.19708492" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49864498" visible="true" weight="0.2313988" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
